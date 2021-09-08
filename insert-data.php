@@ -9,7 +9,7 @@ function insertData($conn, $u_name, $u_email)
         return 'Please fill all required fields.';
     }
     //IF EMAIL IS NOT VALID
-
+        //here we use filtervar() function to make sure that the external input we are getting is the correct input
     elseif (!filter_var($u_email, FILTER_VALIDATE_EMAIL)) {
         return 'Invalid email address.';
     } else {
